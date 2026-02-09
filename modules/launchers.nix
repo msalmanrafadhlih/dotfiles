@@ -1,4 +1,4 @@
-# ./modules/locals.nix
+# ./modules/launchers.nix
 
 let
   apps = [
