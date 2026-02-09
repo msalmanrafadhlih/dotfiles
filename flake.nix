@@ -1,3 +1,7 @@
+let
+  dotfiles = "bspwm";
+  system = "x86_64-linux";
+in
 {
   description = "BSPWM - NixOS Home Configuration ";
 
@@ -24,11 +28,8 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
-
   let
-    system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    dotfiles = "bspwm";
   in {
     # Output untuk Standalone (command: home-manager switch)
     # homeConfigurations."tquilla" = home-manager.lib.homeManagerConfiguration {
@@ -38,7 +39,7 @@
     # };
 
     # Output Baru: Module untuk di-import oleh Flake Utama (NixOS)
-    nixosModules.default = { ... }: {
+    nixosModules.default = { username, hostname, ... }: {
       ###############################
       #### 🧱 Home-Manager Modules
       ###############################
@@ -50,7 +51,7 @@
           tquilla = import ./modules;
         };
         extraSpecialArgs = {
-          inherit inputs dotfiles;
+          inherit inputs dotfiles username hostname;
         };
         backupFileExtension = "backup";
       };
