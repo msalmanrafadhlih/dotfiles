@@ -38,18 +38,18 @@
 
     # Output Baru: Module untuk di-import oleh Flake Utama (NixOS)
     nixosModules.default = { ... }: {
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users = {
+          tquilla = import ./home;
+        };
+        extraSpecialArgs = {inherit inputs;};
+        backupFileExtension = "backup";
+      };
+
       imports = [
         home-manager.nixosModules.home-manager
-		home-manager = {
-			useGlobalPkgs = true;
-			useUserPackages = true;
-			users = {
-				tquilla = import ./home;
-			};
-			extraSpecialArgs = {inherit inputs;};
-			backupFileExtension = "backup";
-		};
-
         ###################################
         ## 🧩 Overlays & External Modules
         ###################################
