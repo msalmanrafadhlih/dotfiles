@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=suckless terminal
+Comment=simple-terminal emulator for X
+Icon=~/Pictures/iconApps/simple terminal.png
+Exec=kdocker -f -q st
+Categories=System;TerminalEmulator
+Path=
+Terminal=false
+StartupNotify=true

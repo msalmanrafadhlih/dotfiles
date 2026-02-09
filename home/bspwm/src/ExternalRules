@@ -1,0 +1,16 @@
+#!/bin/sh
+wid="$(bspc query -N -n focused)"
+class=$2
+instance=$3
+title="$(xprop -id "${wid}" | grep -oP '_NET_WM_NAME\(UTF8_STRING\) = "\K[^"]*')"
+
+echo "wid=$wid, class=$class, title=$title" >> /tmp/bspwm_rule_debug.log
+
+if [[ "$class" =~ "Code" || "$class" =~ "code-oss" ]]; then
+    if [[ "$title" =~ Chat.* || "$title" =~ Visual.* ]]; then
+        echo "state=floating rectangle=470x1020+1445+30"
+        echo "Rule matched for $wid in WM=$title" >> /tmp/bspwm_rule_debug.log
+    elif [[ "$title" =~ *.Chromium ]]; then
+        echo "state=floating rectangle=1435x1020+3+30"
+    fi
+fi
