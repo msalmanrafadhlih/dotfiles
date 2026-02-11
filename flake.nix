@@ -33,6 +33,7 @@
   outputs = { home-manager, ... }@inputs:
   let
     dotfiles = "bspwm";
+
   in
   {
     # Output untuk Standalone (command: home-manager switch)
