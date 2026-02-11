@@ -1,0 +1,56 @@
+theme = "merionette" # heisenberg, merionette, peachpuff, vim_dark_high_contrast
+
+[editor]
+# scrolloff = 9
+scroll-lines = 1
+cursorline = true
+auto-save = false
+completion-trigger-len = 1
+true-color = true
+auto-pairs = true
+# rulers = [120]
+idle-timeout = 50
+line-number = "relative"
+bufferline = "multiple"
+color-modes = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.indent-guides]
+render = true
+character = "·" # Some characters that work well: " ▏", " ┆ ", " ┊ ", " ⸽"
+skip-levels = 1
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding"]
+center = []
+right = ["selections", "primary-selection-length", "position", "position-percentage", "spacer", "diagnostics", "workspace-diagnostics", "version-control"]
+ 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = false
+ 
+[keys.insert]
+f = { j = "normal_mode" } # Maps "fj" to exit insert mode
+j = { f = "normal_mode" } # Maps "fj" to exit insert mode
+
+[keys.normal]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+[keys.select]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+
+
+

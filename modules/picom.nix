@@ -1,4 +1,3 @@
-{ services, pkgs, ... }:
 
 {
   services.picom = {

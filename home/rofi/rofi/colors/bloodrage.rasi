@@ -1,0 +1,15 @@
+/**
+ *
+ * Custom Colors for Rofi
+ * Theme: Red Demon Style (BGR hex)
+ *
+ **/
+
+* {
+	background:     #0A0A1AFF;   /* RGB #1A0A0A → BGR */
+	background-alt: #111133FF;   /* RGB #331111 → BGR */
+	foreground:     #ECECFFFF;   /* RGB #FFECEC → BGR */
+	selected:       #3B3BFFFF;   /* RGB #FF3B3B → BGR */
+	active:         #2424B3FF;   /* RGB #B32424 → BGR */
+	urgent:         #335CFFFF;   /* RGB #FF5C33 → BGR */
+}

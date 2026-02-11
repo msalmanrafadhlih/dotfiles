@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   batteryScript = pkgs.writeScript "battery-notify.sh" ''

@@ -11,8 +11,28 @@ let
 
   configs = {
 		bspwm = "bspwm";
-		polybar = "polybar";
-		sxhkd = "sxhkd";
+		polybar = "bspwm/polybar";
+		sxhkd = "bspwm/sxhkd";
+		picom = "picom";
+		rofi = "rofi";
+		dunst = "dunst";
+		# eww = "eww";
+		
+		nano = "nano";
+		tmux = "tmux";
+		rmpc = "rmpc";
+		# ncmpcpp = "ncmpcpp";
+		fastfetch = "fastfetch";
+		btop = "btop";
+		kitty = "kitty";
+		helix = "helix";
+		"com.kdocker" = "com.kdocker";
+
+#  		alacritty = "alacritty";
+#		"gtk-3.0" = "gtk-3.0";
+#		ghostty = "ghostty";
+
+		"vesktop/themes" = "vesktop/themes";
   };
 
 in

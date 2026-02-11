@@ -1,7 +1,5 @@
-{ bin, ... }:
-
 {
-   home.file.".local/bin/colorscript" = {
+  home.file.".local/bin/colorscript" = {
  	text = ''
 #!/bin/sh
 DIR_COLORSCRIPTS="$HOME/.local/share/asciiart"

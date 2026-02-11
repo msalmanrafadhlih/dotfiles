@@ -1,4 +1,3 @@
-{ libs, services, program, ... }:
 
 {
   home.file.".local/bin/bg-slideshow" = {

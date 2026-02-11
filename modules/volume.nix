@@ -1,4 +1,3 @@
-{ config, pkgs, lib, ... }:
 
 {
   home.file.".local/bin/volume.sh" = {

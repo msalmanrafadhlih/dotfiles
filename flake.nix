@@ -1,6 +1,5 @@
 let
   dotfiles = "bspwm";
-  system = "x86_64-linux";
 in
 {
   description = "BSPWM - NixOS Home Configuration ";
@@ -9,6 +8,7 @@ in
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     zjstatus.url = "github:dj95/zjstatus";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -27,10 +27,8 @@ in
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
-  let
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
+  outputs = { home-manager, ... }@inputs:
+  {
     # Output untuk Standalone (command: home-manager switch)
     # homeConfigurations."tquilla" = home-manager.lib.homeManagerConfiguration {
     #   inherit pkgs;
@@ -39,23 +37,7 @@ in
     # };
 
     # Output Baru: Module untuk di-import oleh Flake Utama (NixOS)
-    nixosModules.default = { username, hostname, ... }: {
-      ###############################
-      #### 🧱 Home-Manager Modules
-      ###############################
-      home-manager = {
-        useGlobalPkgs = true;
-        useUserPackages = true;
-        users = {
-          # ./modules/default.nix
-          tquilla = import ./modules;
-        };
-        extraSpecialArgs = {
-          inherit inputs dotfiles username hostname;
-        };
-        backupFileExtension = "backup";
-      };
-
+    nixosModules.default = { username, hostname, system, ... }: {
       imports = [
         home-manager.nixosModules.home-manager
       ###################################
@@ -69,6 +51,23 @@ in
       ###################################
         ./modules/bspwm.nix
       ];
+
+
+      ###############################
+      #### 🧱 Home-Manager Modules
+      ###############################
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users = {
+          # ./modules/default.nix ./home/default.nix
+          tquilla = { imports = [ ./modules ./home ]; };
+        };
+        extraSpecialArgs = {
+          inherit inputs system dotfiles username hostname;
+        };
+        backupFileExtension = "backup";
+      };
     };
   };
 }

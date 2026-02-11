@@ -1,4 +1,3 @@
-{ config, pkgs, libs, ... }:
 
 {
   home.file.".local/bin/brightness.sh" = {

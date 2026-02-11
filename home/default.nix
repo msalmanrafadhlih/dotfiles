@@ -3,22 +3,20 @@
  imports = [
   ./bspwm
   # ./btm
-  # ./cosmic
   ./fastfetch
+  ./zen-browser
   # ./firefox
-  # ./gemini
-  ./git
-  # ./gtk
+  ./gemini
+  ./gtk
   # ./helix
   # ./inlyne
-  ./kitty
+  # ./kitty
   ./lazygit
-  # ./nwg-drawer
-  # ./rofi
-  # ./serpl
+  ./nwg-drawer
+  ./rofi
+  ./serpl
   ./shell
   # ./starship
-  # ./swayimg
   # ./thunderbird
   # ./virtmanager
   # ./wezterm

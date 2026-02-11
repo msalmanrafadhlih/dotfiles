@@ -1,4 +1,3 @@
-{ programs, pkgs, libs, ... }:
 
 {
   home.file.".local/bin/sh-runner.sh" = {

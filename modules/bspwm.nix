@@ -7,6 +7,7 @@
     sxhkd
     picom
     eww
+    geany
 
     killall
     xclip
@@ -37,6 +38,10 @@
   #############################
     xserver = {
         enable = true;
+        xkb = {
+          layout = "us";
+          variant = "";
+        };
         windowManager = {
             bspwm.enable = true;
         };
@@ -57,7 +62,7 @@
   ###################################
   ## XDG + GTK SETTINGS
   #####################################
-		dbus.enable = true;
+	dbus.enable = true;
     dbus.packages = with pkgs; [ dconf ];
 		udisks2.enable = true;
 		gvfs = {
@@ -69,7 +74,6 @@
   ###################################
   ## THUNAR OPTIMALIZATION
   #####################################
-  services.tumbler.enable = true; # thumbnails di Thunar  
   programs = {
 		thunar = {
 			enable = true;
@@ -81,9 +85,10 @@
 			];
 		};
   };
+  services.tumbler.enable = true; # thumbnails di Thunar  
 
-	#####################################
-	## XDG PORTAL (X11 Only)
+  #####################################
+  ## XDG PORTAL (X11 Only)
   #####################################
 	xdg.portal = {
 		enable = true;

@@ -1,0 +1,1 @@
+/home/tquilla/.config/rofi/files/powermenu/type-3/powermenu.sh

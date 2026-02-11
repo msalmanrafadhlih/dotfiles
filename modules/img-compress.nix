@@ -1,5 +1,3 @@
-{ bin, ... }:
-
 {
   home.file.".local/bin/compress-images.sh" = {
 	text = ''
@@ -8,7 +6,7 @@
 # ==============================
 #  Image Compressor Script (Nix Edition)
 #  Supports: lossless & lossy
-# Author: ChatGPT (for tquilla 😎)
+#  Author: ChatGPT (for tquilla 😎)
 # ==============================
 
 # cara menggunakannya :

@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-
+# ./modules/xsession.nix
 {
   
   home.sessionVariables = {
@@ -17,10 +16,10 @@
 	    eval "$(dbus-launch --sh-syntax)"
 	    export DBUS_SESSION_BUS_ADDRESS
 	    
-		export XCURSOR_THEME=Kafka
-		export XCURSOR_SIZE=14
-		xsetroot -cursor_name left_ptr
-		mpDris2 &
+  		export XCURSOR_THEME=Kafka
+  		export XCURSOR_SIZE=14
+  		xsetroot -cursor_name left_ptr
+  		mpDris2 &
     '';
   };
   

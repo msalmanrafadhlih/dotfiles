@@ -31,45 +31,41 @@ in
 		  fi
 		'';
   };
-	  
-  imports = [
-	./applications.nix
-	# ./bash.nix
-	# ./zshrc.nix
-	./packages.nix
-	# ./bat.nix
-	# ./xsession.nix
-	# ./battery.nix
-	# ./brightness.nix
-	# ./volume.nix
-	# ./media.nix
-	# ./nanorc.nix
-	# ./git-prompt.nix
-	# ./tar.nix
-	# ./xyz.nix
-	# ./hide-polybar.nix
-	# ./show-polybar.nix
-	# ./background.nix
-	# ./opencam.nix
-	# ./bookmarks.nix
-	# ./github-repos.nix
-	# ./tmux-sessions.nix
-	# ./run.nix
-	# ./mpd.nix
-	# ./xdg-home.nix
-	# ./picom.nix
-	# ./img-compress.nix
-	# ./colorscript.nix
-	# ./youtube.nix
-	# ./reddit.nix
+	imports = [
+	  ./applications.nix
+	  ./background.nix
+	  ./bat.nix
+	  ./battery.nix
+	  ./bookmarks.nix
+	  ./brightness.nix
+	  ./colorscript.nix
+	  ./github-repos.nix
+	  # ./git-prompt.nix
+	  ./hide-polybar.nix
+	  ./img-compress.nix
+	  ./media.nix
+	  ./mpd.nix
+	  ./nanorc.nix
+	  ./opencam.nix
+	  ./packages.nix
+	  ./picom.nix
+	  ./reddit.nix
+	  ./run.nix
+	  ./shell.nix
+	  ./show-polybar.nix
+	  # ./suckless.nix
+	  ./tar.nix
+	  ./tmux-sessions.nix
+	  ./volume.nix
+	  ./xsession.nix
+	  # ./xdg-home.nix # backup error make me sick!!
+	  ./xyz.nix
+	  ./youtube.nix  
 
-	# ./suckless.nix
-	# ./firefox.nix ## This is for Whiskey, not for me! ~ Tquilla
+		# # comment "#" this if you don't want to use spotify with custom theme (spicetify)
+		# ./spotify.nix
 
-	# comment "#" this if you don't want to use spotify with custom theme (spicetify)
-	# ./spotify.nix
-
-	inputs.catppuccin.homeModules.catppuccin
-	# inputs.spicetify-nix.homeManagerModules.default
+		inputs.catppuccin.homeModules.catppuccin
+		# inputs.spicetify-nix.homeManagerModules.default
   ]; 
 }

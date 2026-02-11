@@ -1,0 +1,1 @@
+/home/tquilla/.config/rofi/files/launchers/type-7/launcher.sh
