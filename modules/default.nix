@@ -52,7 +52,6 @@ in
 	  ./picom.nix
 	  ./reddit.nix
 	  ./run.nix
-	  ./shell.nix
 	  ./show-polybar.nix
 	  # ./suckless.nix
 	  ./tar.nix

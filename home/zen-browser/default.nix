@@ -1,10 +1,10 @@
 # ./zen-browser
-{ pkgs, inputs, ... }:
+{ inputs, system, ... }:
 
 {
   programs.zen-browser = {
     enable = true;
-    package = inputs.zen-browser.packages."${pkgs.system}".default;
+    package = inputs.zen-browser.packages.${system}.default;
 
     # Profil default
     profiles.default = {

@@ -28,9 +28,9 @@ let
 		helix = "helix";
 		"com.kdocker" = "com.kdocker";
 
-#  		alacritty = "alacritty";
-#		"gtk-3.0" = "gtk-3.0";
-#		ghostty = "ghostty";
+		# "gtk-3.0" = "gtk-3.0";
+		# ghostty = "ghostty";
+    # alacritty = "alacritty";
 
 		"vesktop/themes" = "vesktop/themes";
   };

@@ -6,6 +6,13 @@
     catppuccin.url = "github:catppuccin/nix";
     zjstatus.url = "github:dj95/zjstatus";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    textfox.url = "github:adriankarlen/textfox";
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -21,7 +28,6 @@
       url = "github:KKV9/compress.yazi";
       flake = false;
     };
-
   };
 
   outputs = { home-manager, ... }@inputs:
@@ -43,8 +49,10 @@
       ###################################
       ## 🧩 Overlays & External Modules
       ###################################
-        # {nixpkgs.overlays = [overlay-unstable];}
-        # nur.modules.nixos.default
+        { nixpkgs.overlays = [
+            inputs.nur.overlays.default
+          ];
+        }
 
       ###################################
       ## 🧱 System Modules - BSPWM

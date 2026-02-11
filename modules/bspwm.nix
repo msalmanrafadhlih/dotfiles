@@ -13,10 +13,10 @@
     xclip
     dpkg
     imlib2
-    xorg.xinit
-    xorg.xsetroot
-    xorg.xrandr
-    xorg.xinput
+    xinit
+    xsetroot
+    xrandr
+    xinput
 
     brightnessctl
     libcanberra-gtk3
@@ -77,7 +77,7 @@
   programs = {
 		thunar = {
 			enable = true;
-			plugins = with pkgs.xfce; [
+			plugins = with pkgs; [
 				thunar-volman
 				thunar-dropbox-plugin
 				thunar-vcs-plugin
@@ -96,6 +96,11 @@
 		extraPortals = with pkgs; [
 		  xdg-desktop-portal-gtk
 		];
+		config = {
+		  common = {
+		    default = ["gtk"];
+		  };
+		};
 	};
 	environment.sessionVariables = {
 		XDG_CURRENT_DESKTOP = "bspwm";

@@ -1,8 +1,9 @@
 {
   programs.zsh = {
     enable = true;
-    autocd = true;
-    shellInit = builtins.readFile ./init-zsh.zsh ;
+    initContent = ''
+        source ${./init-zsh.zsh}
+      '';
 
     # vim mode (helix mode plugins did not work for me)
     defaultKeymap = "viins";
@@ -17,9 +18,6 @@
       ignoreSpace = true;
     };
 
-    histSize = 2000;
-    histFile = "$HOME/.config/zsh/.zsh_history";
-
 	  setOptions = [
 		"APPEND_HISTORY"
 		"SHARE_HISTORY"
@@ -30,8 +28,8 @@
 		"HIST_IGNORE_DUPS"
 		"HIST_FIND_NO_DUPS"
 
-		# "AUTOCD"
-		# "PROMPT_SUBST"
+		"AUTOCD"
+		"PROMPT_SUBST"
 		"MENU_COMPLETE"
 		"LIST_PACKED"
 		"AUTO_LIST"

@@ -43,13 +43,16 @@ fi
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export SUDO_PROMPT="Deploying root access for %u. Password pls: "
 export BAT_THEME="base16"
+export KEYTIMEOUT=1
 
 if [[ -d "$HOME/.local/bin" ]]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# SAVEHIST=5000
-# HISTDUP=erase
+SAVEHIST=2000
+HISTSIZE=2000
+HISTDUP=erase
+HISTFILE="$HOME/.config/zsh/.zsh_history"
 
 # ==========================================================
 # Completion styles
@@ -99,7 +102,6 @@ bindkey '^I' expand-or-complete-with-dots
 # ==========================================================
 # Prompt
 # ==========================================================
-setopt PROMPT_SUBST
 
 dir_icon() {
     if [[ "$PWD" == "$HOME" ]]; then

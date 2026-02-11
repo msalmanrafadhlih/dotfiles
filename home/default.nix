@@ -3,9 +3,9 @@
  imports = [
   ./bspwm
   # ./btm
-  ./fastfetch
-  ./zen-browser
-  # ./firefox
+  # ./fastfetch
+  # ./zen-browser
+  ./firefox
   ./gemini
   ./gtk
   # ./helix
@@ -13,7 +13,7 @@
   # ./kitty
   ./lazygit
   ./nwg-drawer
-  ./rofi
+  # ./rofi
   ./serpl
   ./shell
   # ./starship
