@@ -37,7 +37,6 @@
 	  helix
 
     # UTILS
-    jellyfin-ffmpeg
     ffmpeg-full
   ];
 }
