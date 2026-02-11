@@ -5,7 +5,7 @@ let
   branch = dotfiles;
   home = config.home.homeDirectory;
 
-  dotfiles_path = "${home}/.dotfiles/${branch}";
+  dotfiles_path = "${home}/.dotfiles/${branch}/home";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 
   locals = import ./launchers.nix ;

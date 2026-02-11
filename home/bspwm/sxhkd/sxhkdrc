@@ -23,7 +23,7 @@ super + Escape
 # ==============================================  MAIN APPS
 # ---------------------------------------------------------  Terminal
 super + Return
-	kitty --class=TerminalDefault
+	st -c TerminalDefault
 # ---------------------------------------------------------  Menu Apps
 super + @space
 	~/.config/rofi/scripts/launcher-t7.sh

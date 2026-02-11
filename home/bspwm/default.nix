@@ -7,7 +7,7 @@ let
 
   home = config.home.homeDirectory;
   branch = "bspwm";
-  dotfiles_path = "${home}/.dotfiles/${branch}";
+  dotfiles_path = "${home}/.dotfiles/${branch}/home";
 
   configs = {
 		bspwm = "bspwm";
