@@ -124,4 +124,9 @@
     auto-optimise-store = true;
     warn-dirty = false;
   };
+
+	console = {
+		font = "Lat2-Terminus16";
+		keyMap = "us";
+	};
 }
