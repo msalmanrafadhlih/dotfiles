@@ -4,8 +4,9 @@
   ./bspwm
   # ./btm
   # ./fastfetch
-  ./zen-browser
+  # ./zen-browser
   # ./firefox
+  ./zed-editor
   ./gemini
   ./gtk
   # ./helix

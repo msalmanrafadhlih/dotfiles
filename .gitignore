@@ -11,9 +11,8 @@
 /.envrc
 
 # ---- Ignore machine-specific configs ----
-# flake.lock
+flake.lock
 # hardware-configuration.nix
-# user/hardware-configuration.nix
 
 # ---- System & Editor junk ----
 *~

@@ -5,12 +5,12 @@
 }: {
   programs = {
     obs-studio.enable = true;  
-    zed-editor.enable = true;
   };
   
   home.packages = with pkgs; [
     # GUI
     ungoogled-chromium
+    vivaldi
     # gimp
     timg
     zoom
