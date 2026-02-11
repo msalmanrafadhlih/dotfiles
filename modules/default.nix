@@ -39,6 +39,7 @@ in
 	  ./bookmarks.nix
 	  ./brightness.nix
 	  ./colorscript.nix
+	  ./git.nix
 	  ./github-repos.nix
 	  # ./git-prompt.nix
 	  ./hide-polybar.nix
