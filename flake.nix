@@ -1,6 +1,3 @@
-let
-  dotfiles = "bspwm";
-in
 {
   description = "BSPWM - NixOS Home Configuration ";
 
@@ -28,6 +25,9 @@ in
   };
 
   outputs = { home-manager, ... }@inputs:
+  let
+    dotfiles = "bspwm";
+  in
   {
     # Output untuk Standalone (command: home-manager switch)
     # homeConfigurations."tquilla" = home-manager.lib.homeManagerConfiguration {
