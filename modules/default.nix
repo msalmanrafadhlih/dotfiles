@@ -20,14 +20,14 @@ in
 		  mkdir -p ${dotfiles_path}
 	  
 		  if [ ! -d "${dotfiles_path}/.git" ]; then
-			echo "--- Cloning Dotfiles dari GitHub (${branch}) ---"
-			${pkgs.git}/bin/git clone -b ${branch} ${repo_url} "${dotfiles_path}"
+				echo "--- Cloning Dotfiles dari GitHub (${branch}) ---"
+				${pkgs.git}/bin/git clone -b ${branch} ${repo_url} "${dotfiles_path}"
 		  else
-			echo "--- Dotfiles sudah ada, melakukan check update (safe) ---"
-			cd "${dotfiles_path}"
-			# Melakukan fetch saja agar tidak merusak kerjaan lokal
-			${pkgs.git}/bin/git fetch origin ${branch}
-			echo "Gunakan 'git pull --rebase' secara manual di folder dotfiles jika ingin sinkronisasi."
+				echo "--- Dotfiles sudah ada, melakukan check update (safe) ---"
+				cd "${dotfiles_path}"
+				# Melakukan fetch saja agar tidak merusak kerjaan lokal
+				${pkgs.git}/bin/git fetch origin ${branch}
+				echo "Gunakan 'git pull --rebase' secara manual di folder dotfiles jika ingin sinkronisasi."
 		  fi
 		'';
   };
