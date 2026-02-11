@@ -2,34 +2,33 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # BSPWM Stuff
+    # ======== BSPWM Stuff
     polybarFull
     sxhkd
     picom
     eww
-    geany
 
+    # ======== TOOLS
+    sound-theme-freedesktop
+    libcanberra-gtk3
+    flameshot
+    dunst
+	  kdocker
+		qview
+    mpv
+    feh
+
+    # ======== UTILS
+    brightnessctl
     killall
-    xclip
-    dpkg
+    xclip # Clipboard
     imlib2
     xinit
     xsetroot
     xrandr
     xinput
-
-    brightnessctl
-    libcanberra-gtk3
-    sound-theme-freedesktop
     pamixer
     xdotool
-    xarchiver
-    mpv
-    acpi
-    dunst
-		qview
-
-		cachix
   ];
 
   services = {

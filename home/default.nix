@@ -23,5 +23,20 @@
   ./yazi
   # ./zathura
   # ./zellij
+	# ./bspwm/polybar 
+	# ./bspwm/sxhkd 
+	# ./picom 
+	# ./rofi 
+	# ./dunst 
+	# ./eww 
+	# ./nano 
+	# ./tmux 
+	# ./rmpc 
+	# ./ncmpcpp 
+	# ./btop 
+	# ./com.kdocker 
+	# ./gtk-3.0
+	# ./ghostty 
+ #  ./alacritty 
  ];
 }

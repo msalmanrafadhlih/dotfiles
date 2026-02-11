@@ -6,7 +6,7 @@
       '';
 
     # vim mode (helix mode plugins did not work for me)
-    defaultKeymap = "viins";
+    # defaultKeymap = "viins";
 
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;

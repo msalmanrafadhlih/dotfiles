@@ -3,32 +3,41 @@
   inputs,
   ...
 }: {
+  programs = {
+    obs-studio.enable = true;  
+    zed-editor.enable = true;
+  };
+  
   home.packages = with pkgs; [
-    gimp
-    vivaldi
-    tmux
+    # GUI
+    ungoogled-chromium
+    # gimp
     timg
-
-    nixpkgs-fmt
-    feh
-    gcc
-
+    zoom
+    libreoffice
+    evince # Document Viewer
+    xarchiver
+	  gparted # Manage Disk Partition
+	  vesktop
     # font-manager
     # picard
-    jellyfin-ffmpeg
-    ungoogled-chromium
-    libreoffice
-    zoom
-    evince
-    obs-studio
-    flameshot
-	  helix
-	  gparted
+    # godot
+    # protonvpn-gui
+    # qbittorrent
+    # winboat
+
+    # # GAMING
+    # heroic
+    # lutris
+    
+    # CLI TOOLS
 	  ani-cli
-	  vesktop
-	  kdocker
 	  rmpc
 	  kitty
-	  geany
+	  helix
+
+    # UTILS
+    jellyfin-ffmpeg
+    ffmpeg-full
   ];
 }
