@@ -6,6 +6,7 @@
     polybarFull
     sxhkd
     picom
+    rofi
     eww
 
     # ======== TOOLS
