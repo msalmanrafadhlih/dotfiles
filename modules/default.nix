@@ -21,7 +21,7 @@ in
 	  
 		  if [ ! -d "${dotfiles_path}/.git" ]; then
 				echo "--- Cloning Dotfiles dari GitHub (${branch}) ---"
-				${pkgs.git}/bin/git clone -b ${branch} ${repo_url} "${dotfiles_path}"
+				${pkgs.git}/bin/git clone -b ${branch} --single-branch --depth 1 ${repo_url} "${dotfiles_path}"
 		  else
 				echo "--- Dotfiles sudah ada, melakukan check update (safe) ---"
 				cd "${dotfiles_path}"
