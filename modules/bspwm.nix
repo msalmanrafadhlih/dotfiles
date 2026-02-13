@@ -38,10 +38,10 @@
   #############################
     xserver = {
         enable = true;
-        xkb = {
-          layout = "us";
-          variant = "";
-        };
+        # xkb = {
+        #   layout = "us";
+        #   variant = "";
+        # };
         windowManager = {
             bspwm.enable = true;
         };
@@ -124,9 +124,4 @@
     auto-optimise-store = true;
     warn-dirty = false;
   };
-
-	console = {
-		font = "Lat2-Terminus16";
-		keyMap = "us";
-	};
 }
