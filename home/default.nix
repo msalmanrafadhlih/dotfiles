@@ -13,7 +13,7 @@
   # ./inlyne
   # ./kitty
   ./lazygit
-  ./nwg-drawer
+  # ./nwg-drawer
   # ./rofi
   ./serpl
   ./shell

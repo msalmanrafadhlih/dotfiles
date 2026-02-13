@@ -17,7 +17,7 @@
 
     window {
         border: none;
-        background-color: rgba(17, 17, 27, 0.8);
+        background-color: rgba(17, 17, 27, 0.3);
         /* border: solid 1px #313244; */
         border-radius: 10px;
     }
