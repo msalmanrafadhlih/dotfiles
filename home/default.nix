@@ -24,6 +24,7 @@
   # ./wezterm
   ./yazi
   # ./zathura
+  # ./yazelix
   # ./zellij
 	# ./bspwm/polybar 
 	# ./bspwm/sxhkd 
