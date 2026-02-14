@@ -30,7 +30,7 @@
     };
   };
 
-  outputs = {  ... }@inputs:
+  outputs = { home-manager ... }@inputs:
   let
     dotfiles = "bspwm";
 
@@ -46,6 +46,7 @@
     # Output Baru: Module untuk di-import oleh Flake Utama (NixOS)
     nixosModules.default = { username, hostname, system, ... }: {
       imports = [
+      home-manager.nixosModules.home-manager
       ###################################
       ## 🧩 Overlays & External Modules
       ###################################
