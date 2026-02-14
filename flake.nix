@@ -30,7 +30,7 @@
     };
   };
 
-  outputs = { home-manager ... }@inputs:
+  outputs = { home-manager, ... }@inputs:
   let
     dotfiles = "bspwm";
 
