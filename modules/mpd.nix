@@ -1,4 +1,4 @@
-{ config, pkgs, services, ... }:
+{ config, pkgs, ... }:
 
 let
   local = "${config.home.homeDirectory}/.config/mpd";

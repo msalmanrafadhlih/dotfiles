@@ -42,17 +42,15 @@ in
 	  ./git.nix
 	  ./github-repos.nix
 	  # ./git-prompt.nix
-	  ./hide-polybar.nix
 	  ./img-compress.nix
 	  ./media.nix
-	  ./mpd.nix
+	  ./mpd.nix # ----------
 	  ./nanorc.nix
 	  ./opencam.nix
 	  ./packages.nix
 	  ./picom.nix
 	  ./reddit.nix
 	  ./run.nix
-	  ./show-polybar.nix
 	  # ./suckless.nix
 	  ./tar.nix
 	  ./tmux-sessions.nix
@@ -62,10 +60,6 @@ in
 	  ./xyz.nix
 	  ./youtube.nix  
 
-		# # comment "#" this if you don't want to use spotify with custom theme (spicetify)
-		# ./spotify.nix
-
 		inputs.catppuccin.homeModules.catppuccin
-		# inputs.spicetify-nix.homeManagerModules.default
   ]; 
 }

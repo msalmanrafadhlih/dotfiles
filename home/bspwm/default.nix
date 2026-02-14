@@ -44,4 +44,11 @@ in
     recursive = true;
   }) configs;
   
+  #########################
+  ### Polybar Integrations:
+  # Hide - Unhide Polybar
+  imports = [
+    ./show-polybar.nix
+    ./hide-polybar.nix
+  ];
 }

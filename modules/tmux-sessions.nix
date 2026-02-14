@@ -1,5 +1,3 @@
-{ sessions, libs, programs, ... }:
-
 {
   home.file.".local/bin/tmux-sessions.sh" = {
 	text = ''

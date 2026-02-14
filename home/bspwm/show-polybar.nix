@@ -1,5 +1,3 @@
-{ config, pkgs, lib, ... }:
-
 {
   home.file.".local/bin/show-polybar.sh" = {
 	  text = ''

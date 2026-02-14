@@ -9,6 +9,7 @@
   ./zed-editor
   ./gemini
   ./gtk
+  ./spotify
   # ./helix
   # ./inlyne
   # ./kitty
