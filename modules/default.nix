@@ -5,7 +5,7 @@ let
   branch = dotfiles;
   home = config.home.homeDirectory;
   dotfiles_path = "${home}/.dotfiles/${branch}";
-  repo_url = "https://github.com/msalmanrafadhlih/dotfiles.git";
+  repo_url = "https://github.com/msalmanrafadhlih/Dotfiles.git";
 in
 
 {
