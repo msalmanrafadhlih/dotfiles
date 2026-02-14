@@ -1,24 +1,27 @@
 # ./modules/users.nix
-{ pkgs, username, ... }: {
-  # users.mutableUsers = false;
-  # users.users.izhrs = {
-  #   isNormalUser = true;
-  #   # generated from mkpasswd
-  #   hashedPassword =
-  #     "$6$r9W9Q2GRB50QzaDm$W0MaMODLGU/QyIBQ6AHO8L9JI2naGCnGwAwXphjJqrKNLKfx2KBg3.LExv4oNXl.uyETPz6QJ61sf4.K3yOPu0";
-  #   description = "Mohamed Izhar";
-  #   extraGroups =
-  #     [ "networkmanager" "wheel" "libvirtd" "kvm" "adbusers" "docker" "i2c" ];
-  #   packages = [ ];
-  #   shell = pkgs.zsh;
-  # };
+{ pkgs, username, ... }:
 
+{
+  users.mutableUsers = false;
   users.users.${username} = {
     isNormalUser = true;
-    password = "test";
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" "kvm" "adbusers" "docker" "i2c" ];
+    description = "Tquilla - Main User";
     shell = pkgs.zsh;
-  };
 
-  services.getty.autologinUser = "tquilla";
+    #######################
+    # 'mkpasswd -m sha-512'
+    # or 'openssl passwd -6'
+    hashedPassword = "$6$MxfcpoEAx/d9zgzd$xHQWzszUQAG9RWOfDamQybgX8PMxeZf9qS4.K12qEqgh31fQfZLR7OpxspjCRzSu5MU889MrqBykT/Vsaet6n0";
+
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "libvirtd"
+      "kvm"
+      "adbusers"
+      "docker"
+      "i2c"
+    ];
+  };
+  # services.getty.autologinUser = "tquilla";
 }

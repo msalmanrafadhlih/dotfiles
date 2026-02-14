@@ -16,7 +16,7 @@
       # change 'bspwm' to dotfiles u want to use
       #### Available Dotfiles = 
       #### bspwm, hyrpland, niri, 
-      url = "github:msalmanrafadhlih/dotfiles/bspwm";
+      url = "github:msalmanrafadhlih/Dotfiles/bspwm";
       # url = "path:./bspwm";
       inputs.nixpkgs.follows = "nixpkgs";
     };

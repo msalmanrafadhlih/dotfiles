@@ -13,18 +13,18 @@
   ## SYSTEM CONFIGURATIONS
   USER = "hx ~/.dotfiles/system/system/modules/users.nix";
   ALIAS = "hx ~/.dotfiles/system/system/modules/aliases.nix";
-  SYSINSTALL = "hx ~/.dotfiles/system/system/system-packages.nix";
+  SYSINSTALL = "hx ~/.dotfiles/system/system/modules/system-packages.nix";
   NIX = "hx ~/.dotfiles/system/system/configuration.nix";
   HNIX = "bat ~/.dotfiles/system/system//hardware-configuration.nix";
   FLAKE = "hx ~/.dotfiles/system/flake.nix";
   LOCK = "bat ~/.dotfiles/system/flake.lock";
-  SYSMDL = "hx ~/.dotfiles/system/system/modules";
+  SYSMDL = "yazi ~/.dotfiles/system/system/modules";
 
   ## USER CONFIGURATIONS {EDIT}
-  DOTS = "hx ~/.dotfiles/$XDG_CURRENT_DESKTOP/home && ls";
+  DOTS = "yazi ~/.dotfiles/$XDG_CURRENT_DESKTOP/home";
   INSTALL = "hx ~/.dotfiles/$XDG_CURRENT_DESKTOP/modules/packages.nix";
   HOMEFLAKE = "cd ~/.dotfiles/$XDG_CURRENT_DESKTOP && ls && hx ~/.dotfiles/$XDG_CURRENT_DESKTOP/flake.nix";
-  MDL = "hx ~/.dotfiles/$XDG_CURRENT_DESKTOP/modules";
+  MDL = "yazi ~/.dotfiles/$XDG_CURRENT_DESKTOP/modules";
 
   ## USER CONFIGURATIONS {SAVE}
   BIN = "chmod +x ~/.local/bin/*.sh";
@@ -89,14 +89,15 @@
   SVFONT = "fc-cache -fv";
   GETHASH = "nix store prefetch-file"; ## GETHASH <link>
   PKGLIST = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq";
-  connect = "sudo tailscale up --operator=$USER";
+  CONNECT = "sudo tailscale up --operator=$USER";
 
-  ## productivities
+  ## Utilities
   CAM = "~/.local/bin/opencam";
   IMGCOMPRESS = "~/.local/bin/compress-images.sh";
   DTAR = "~/.local/bin/tar.sh"; ## overwite folder to folder.tar.gz
   XYZ = "~/.local/bin/xyz.sh";
   MPG = "ffmpeg -i"; ## MPG <path/to/img.png> <overwrite/img/file-extension>
+  AISTUDIO = "cd ~/.config/aistudio";
   yz = "yazi";
   YZ = "yazi";
 

@@ -1,6 +1,6 @@
-{ ... }:
-
 {
+  # tool otomatis untuk mengatur
+  # konsumsi daya hardware di Linux.
   services.tlp = { 
   	enable = true;
   	settings = {

@@ -10,6 +10,7 @@
     ./modules/locale.nix
     ./modules/network.nix
     ./modules/hardware.nix
+    # ./modules/power.nix
     ./modules/system-packages.nix
     ./modules/services.nix
     ./modules/users.nix

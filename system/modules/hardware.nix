@@ -18,8 +18,8 @@
 
 	# KEYBOARD SETTINGS
 	###################
-	console = {
-		font = "Lat2-Terminus16";
-		keyMap = "us";
-	};
+	# console = {
+	# 	font = "Lat2-Terminus16";
+	# 	keyMap = "us";
+	# };
 }

@@ -2,10 +2,18 @@
 
 {
   # Bootloader
+	boot.loader.timeout = 5;
+	boot.loader.systemd-boot.enable = true;
+	boot.loader.efi.canTouchEfiVariables = true;
+	boot.loader.systemd-boot.configurationLimit = 5;
+
+	# Splash Screen
 	boot = {
 		plymouth = {
 			enable = true;
-			theme = "Bloodrage"; # default = spinner, breeze, fade-in, nixos, solar
+			# DEFAULT THEMES = details, glow, script, spinfinity,
+			# spinner, breeze, fade-in, nixos, solar, text, tribar
+			theme = "spinfinity"; 
 			themePackages = [ pkgs.Bloodrage-plymouth ];
 			extraConfig = "";
 			# logo = pkgs.fetchurl {
@@ -20,17 +28,15 @@
 			"quiet" 
 			"splash"
 			"rd.systemd.show_status=0"
-			"udev.log_level=3" 
+			"vt.global_cursor_default=0"
+			"rd.udev.log_level=0" 
 		];
 	};
 
-  boot.loader.timeout = 2;
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-	boot.loader.systemd-boot.configurationLimit = 3;
 
 	boot.initrd = {
 		verbose = false; # matikan output initrd
+		# systemd.enable = true;
 		kernelModules = [
 			"i915" # intel
 			# "amdgpu" # amd
